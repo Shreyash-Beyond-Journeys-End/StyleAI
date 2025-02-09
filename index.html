@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleAI - Your Fashion Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <div class="animated-background">
+            <div class="gradient-sphere"></div>
+            <div class="gradient-sphere"></div>
+            <div class="gradient-sphere"></div>
+        </div>
+
+
+        <main class="main-content">
+
+            <header class="glass-header">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>StyleAI</h1>
+                        <p>Your Personal Fashion Assistant</p>
+                    </div>
+                </div>
+            </header>
+
+
+            <section class="preferences-section glass-card">
+                <h2><i class="fas fa-sliders-h"></i> Style Preferences</h2>
+                <form id="preferencesForm" class="modern-form">
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="style">
+                                <i class="fas fa-magic"></i> Style
+                            </label>
+                            <div class="select-wrapper">
+                                <select id="style" required>
+                                    <option value="">Choose your style</option>
+                                    <option value="minimalist">Minimalist</option>
+                                    <option value="classic">Classic & Timeless</option>
+                                    <option value="business-professional">Business Professional</option>
+                                    <option value="business-casual">Business Casual</option>
+                                    <option value="smart-casual">Smart Casual</option>
+                                    <option value="casual">Casual</option>
+                                    <option value="streetwear">Streetwear</option>
+                                    <option value="athleisure">Athleisure</option>
+                                    <option value="bohemian">Bohemian/Boho</option>
+                                    <option value="vintage">Vintage/Retro</option>
+                                    <option value="preppy">Preppy</option>
+                                    <option value="edgy">Edgy/Rock</option>
+                                    <option value="glamorous">Glamorous</option>
+                                    <option value="artsy">Artsy/Creative</option>
+                                    <option value="korean">Korean Fashion</option>
+                                    <option value="japanese">Japanese Street Style</option>
+                                    <option value="scandinavian">Scandinavian Minimal</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="occasion">
+                                <i class="fas fa-calendar-alt"></i> Occasion
+                            </label>
+                            <div class="select-wrapper">
+                                <select id="occasion" required>
+                                    <option value="">Select occasion</option>
+
+                                    <option value="office-formal">Office Formal</option>
+                                    <option value="office-casual">Office Casual</option>
+                                    <option value="business-meeting">Business Meeting</option>
+                                    <option value="presentation">Presentation/Conference</option>
+                                    <option value="interview">Job Interview</option>
+
+
+                                    <option value="dinner-formal">Formal Dinner</option>
+                                    <option value="dinner-casual">Casual Dinner</option>
+                                    <option value="date-night">Date Night</option>
+                                    <option value="party-cocktail">Cocktail Party</option>
+                                    <option value="party-casual">Casual Party</option>
+                                    <option value="brunch">Weekend Brunch</option>
+                                    <option value="wedding-guest">Wedding Guest</option>
+                                    <option value="graduation">Graduation</option>
+
+
+                                    <option value="shopping">Shopping</option>
+                                    <option value="city-touring">City Touring</option>
+                                    <option value="coffee-meetup">Coffee Meetup</option>
+                                    <option value="casual-hangout">Casual Hangout</option>
+                                    <option value="movie-theater">Movie Theater</option>
+
+
+                                    <option value="outdoor-casual">Outdoor Casual</option>
+                                    <option value="picnic">Picnic</option>
+                                    <option value="beach">Beach Day</option>
+                                    <option value="travel-day">Travel Day</option>
+                                    <option value="sightseeing">Sightseeing</option>
+
+
+                                    <option value="concert">Concert</option>
+                                    <option value="art-gallery">Art Gallery/Museum</option>
+                                    <option value="theater">Theater Show</option>
+                                    <option value="festival">Festival</option>
+                                    <option value="photo-shoot">Photo Shoot</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="gender">
+                                <i class="fas fa-venus-mars"></i> Gender
+                            </label>
+                            <div class="select-wrapper">
+                                <select id="gender" required>
+                                    <option value="">Select gender</option>
+                                    <option value="female">Female</option>
+                                    <option value="male">Male</option>
+                                    <option value="non-binary">Non-Binary</option>
+                                    <option value="prefer-not-to-say">Prefer Not to Say</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="location">
+                                <i class="fas fa-map-marker-alt"></i> Location
+                            </label>
+                            <div class="location-input">
+                                <input type="text" id="location" placeholder="Enter your city" required>
+                                <button type="button" id="getLocation" class="location-btn">
+                                    <i class="fas fa-crosshairs"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>
+                            <i class="fas fa-palette"></i> Color Preferences
+                        </label>
+                        <div class="color-options">
+                            <label class="color-checkbox">
+                                <input type="checkbox" name="colors" value="black">
+                                <span class="color-swatch" style="background-color: black;"></span>
+                                Black
+                            </label>
+                            <label class="color-checkbox">
+                                <input type="checkbox" name="colors" value="navy">
+                                <span class="color-swatch" style="background-color: navy;"></span>
+                                Navy
+                            </label>
+                            <label class="color-checkbox">
+                                <input type="checkbox" name="colors" value="brown">
+                                <span class="color-swatch" style="background-color: brown;"></span>
+                                Brown
+                            </label>
+                            <label class="color-checkbox">
+                                <input type="checkbox" name="colors" value="grey">
+                                <span class="color-swatch" style="background-color: grey;"></span>
+                                Grey
+                            </label>
+                            <label class="color-checkbox">
+                                <input type="checkbox" name="colors" value="red">
+                                <span class="color-swatch" style="background-color: red;"></span>
+                                Red
+                            </label>
+                            <label class="color-checkbox">
+                                <input type="checkbox" name="colors" value="blue">
+                                <span class="color-swatch" style="background-color: blue;"></span>
+                                Blue
+                            </label>
+                            <label class="color-checkbox">
+                                <input type="checkbox" name="colors" value="green">
+                                <span class="color-swatch" style="background-color: green;"></span>
+                                Green
+                            </label>
+                            <label class="color-checkbox">
+                                <input type="checkbox" name="colors" value="yellow">
+                                <span class="color-swatch" style="background-color: yellow;"></span>
+                                Yellow
+                            </label>
+                            <label class="color-checkbox">
+                                <input type="checkbox" name="colors" value="purple">
+                                <span class="color-swatch" style="background-color: purple;"></span>
+                                Purple
+                            </label>
+                            <label class="color-checkbox">
+                                <input type="checkbox" name="colors" value="pink">
+                                <span class="color-swatch" style="background-color: pink;"></span>
+                                Pink
+                            </label>
+                            <label class="color-checkbox">
+                                <input type="checkbox" name="colors" value="white">
+                                <span class="color-swatch"
+                                    style="background-color: white; border: 1px solid #ccc;"></span>
+                                White
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-content">
+                            <i class="fas fa-magic"></i>
+                            <span>Generate Style</span>
+                        </span>
+                    </button>
+                </form>
+            </section>
+
+
+            <section class="weather-section glass-card">
+                <h2><i class="fas fa-cloud-sun"></i> Weather Information</h2>
+                <div id="weatherInfo" class="weather-content">
+
+                </div>
+            </section>
+
+
+            <section class="recommendations-section">
+                <h2><i class="fas fa-star"></i> Style Recommendations</h2>
+                <div id="outfitGrid" class="outfit-grid">
+
+                </div>
+            </section>
+
+
+            <section class="favorites-section glass-card">
+                <h2><i class="fas fa-heart"></i> Saved Styles</h2>
+                <div id="favoritesGrid" class="favorites-grid">
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loader">
+            <div class="loader-content">
+                <i class="fas fa-spinner"></i>
+                <span>Generating your perfect style...</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
